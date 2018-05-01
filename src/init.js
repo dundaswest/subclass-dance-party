@@ -21,7 +21,6 @@ $(document).ready(function() {
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
     // make a dancer with a random position
-
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
@@ -29,5 +28,16 @@ $(document).ready(function() {
     );
     $('body').append(dancer.$node);
   });
+  $('.resize').on('click', function(event) {
+    var rDancerMakerFunctionName = $(this).data('data-dancer-maker-function-name');
+    var rDancerMakerFunctionName = window[rDancerMakerFunctionName];
+    var rDancer = new makeResizingDancer (
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
+      Math.random() * 1000
+    );
+    $('body').append(rDancer.$node);
+  });
+  
 });
 
