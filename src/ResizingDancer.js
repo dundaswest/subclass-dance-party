@@ -1,17 +1,14 @@
 var makeResizingDancer = function(top, left, timeBetweenSteps) {
-  Dancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $('<button class="resize"></button>');
+  Dancer.apply(this, arguments);
+  this.$node = $('<span class="resize"></span>')
+  //makeResizingDancer.prototype.setPosition.call(this);
+  this.setPosition();
 };
 
 makeResizingDancer.prototype = Object.create(Dancer.prototype); // <===
 makeResizingDancer.prototype.constructor = makeResizingDancer;
 
 makeResizingDancer.prototype.step = function() {
-
   this.oldStep = Dancer.prototype.step.call(this);
-  //this.toggle();
-};
-
-makeResizingDancer.prototype.setPosition = function() {
-  this.setPosition();
+  this.$node.toggle();
 };

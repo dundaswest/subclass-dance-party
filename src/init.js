@@ -25,19 +25,8 @@ $(document).ready(function() {
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000
-    );
+      );
     $('body').append(dancer.$node);
-  });
-  $('.resize').on('click', function(event) {
-    var rDancerMakerFunctionName = $(this).data('data-dancer-maker-function-name');
-    var rDancerMakerFunctionName = window[rDancerMakerFunctionName];
-    var rDancer = new makeResizingDancer (
-      $('body').height() * Math.random(),
-      $('body').width() * Math.random(),
-      Math.random() * 1000
-    );
-    $('body').append(rDancer.$node);
-  });
-  
+    });
 });
 

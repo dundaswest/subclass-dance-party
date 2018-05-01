@@ -25,8 +25,13 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
-.resize{
-  border:50px solid green;
+.resize {
+  border:10px solid blue;
   border-radius:10px;
   position:absolute;
+}
+.another {
+  border:10px solid yellow;
+  border-radius:10px;
+  position:relative;
 }
