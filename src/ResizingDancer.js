@@ -1,7 +1,6 @@
 var makeResizingDancer = function(top, left, timeBetweenSteps) {
   Dancer.apply(this, arguments);
-  this.$node = $('<span class="resize"></span>')
-  //makeResizingDancer.prototype.setPosition.call(this);
+  this.$node = $('<span class="resize"></span>');
   this.setPosition();
 };
 
