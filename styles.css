@@ -2,11 +2,11 @@ body, html{
   height:100%;
 }
 body{
-  background-image: url("https://espngrantland.files.wordpress.com/2015/07/minions_2015-wide-e1436818869870.jpg");
+  background: url("https://espngrantland.files.wordpress.com/2015/07/minions_2015-wide-e1436818869870.jpg") no-repeat top center;
   margin: 0px;
   background-color:#444;
   font-size: 18px;
-  background-size: auto;
+  background-size: cover;
 
 }
 body, a:link, a:visited, a:active{
@@ -33,7 +33,6 @@ body, a:link, a:visited, a:active{
 }
 .resize {
   border:1px solid black;
-  
   border-radius:10px;
   content: url('https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/bf9d98e6-4889-4901-9283-76af7c0a45f0.jpg._CB289162043__SL300__.jpg');
   position:absolute;
@@ -49,9 +48,7 @@ body, a:link, a:visited, a:active{
   height: auto;
   
 }
-/*.img {
-    border: 1000px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-    width: 100px;
-}*/
+.highlight {
+  width:15%;
+  height: auto;  
+}

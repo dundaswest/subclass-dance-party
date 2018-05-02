@@ -26,18 +26,28 @@ $(document).ready(function() {
     );
     window.dancers.push(dancer);
     $('body').append(dancer.$node);
-  });
+    
+    
+    $('.resize').on('mouseover', function(event) {
+      $(this).addClass("highlight");
+    });
+    $('.resize').on('mouseout', function(event) {
+      $(this).removeClass("highlight");
+    });
+      
+
+    $('.LineUpButton').on('click', function(event) {
+
+      var styleSettings = {};
+      styleSettings.top = 100;
+      styleSettings.left = 40;
+      for(var i = 0; i < window.dancers.length;i++) {
+        window.dancers[i];
+        styleSettings.left += 100;
+        window.dancers[i].$node.css(styleSettings);
+      }
+    });
 
 
-  $('.LineUpButton').on('click', function(event) {
-
-    var styleSettings = {};
-    styleSettings.top = 40;
-    styleSettings.left = 320;
-    for(var i = 0; i < window.dancers.length;i++) {
-      window.dancers[i];
-      styleSettings.top += 100;
-      window.dancers[i].$node.css(styleSettings);
-    }
   });
 });

@@ -9,5 +9,4 @@ makeResizingDancer.prototype.constructor = makeResizingDancer;
 
 makeResizingDancer.prototype.step = function() {
   this.oldStep = Dancer.prototype.step.call(this);
-  this.$node.toggle();
 };

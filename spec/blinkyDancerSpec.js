@@ -11,6 +11,7 @@ describe('blinkyDancer', function() {
   it('should have a jQuery $node object', function() {
     expect(blinkyDancer.$node).to.be.an.instanceof(jQuery);
   });
+  
 
   it('should have a step function that makes its node blink', function() {
     sinon.spy(blinkyDancer.$node, 'toggle');
@@ -30,5 +31,18 @@ describe('blinkyDancer', function() {
       clock.tick(timeBetweenSteps);
       expect(blinkyDancer.step.callCount).to.be.equal(2);
     });
+  });
+});
+
+
+describe('makeAnotherDancer', function() {
+  var AnotherDancer, clock;
+  var timeBetweenSteps = 100;
+  beforeEach(function() {
+    clock = sinon.useFakeTimers();
+    AnotherDancer = new makeAnotherDancer(10, 20, timeBetweenSteps);
+  });
+  it('should have a jQuery $node object', function() {
+    expect(AnotherDancer.$node).to.be.an.instanceof(jQuery);
   });
 });
